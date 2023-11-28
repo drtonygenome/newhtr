@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTR Result</title>
+    <!-- Link to Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">HTR Prediction Result</h1>
+        <div class="row mt-4">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Prediction Result:</h5>
+                        {% if predicted_classe == "1" %}
+                        <p class="card-text" >The patient's predicted outcome is: <b style="color: red;">{{ result }}</b></p>
+                        <p class="card-text"><b><span style="color: red;">group: {{ predicted_classe }} -
+                                    ({{ prediction }})</span></b></p>
+                        {% else %}
+                        <p class="card-text">The patient's predicted outcome is: <b style="color: green;">{{ result }}</b></p>
+                        <p class="card-text"><b><span style="color: green;">group: {{ predicted_classe }} -
+                                    ({{ prediction }})</span></b></p>
+                        {% endif %}
+                        <h5 class="card-title">Input Data:</h5>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th>CD44</th>
+                                    <td>{{ input_data["CD44"][0] }}</td>
+                                </tr>
+                                <tr>
+                                    <th>TOP2A</th>
+                                    <td>{{ input_data["TOP2A"][0] }}</td>
+                                </tr>
+                                <tr>
+                                    <th>SAMSN1</th>
+                                    <td>{{ input_data["SAMSN1"][0] }}</td>
+                                </tr>
+                                <tr>
+                                    <th>RBM47</th>
+                                    <td>{{ input_data["RBM47"][0] }}</td>
+                                </tr>
+                                <tr>
+                                    <th>CORO1A</th>
+                                    <td>{{ input_data["CORO1A"][0] }}</td>
+                                </tr>
+                                <tr>
+                                    <th>ZC3HAV1</th>
+                                    <td>{{ input_data["ZC3HAV1"][0] }}</td>
+                                </tr>
+                                <tr>
+                                    <th>HLAA</th>
+                                    <td>{{ input_data["HLAA"][0] }}</td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                        <a href="/" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JS via CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTR prediction using RBP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>HTR</h1>
+        <form method="POST" action="/" class="mx-auto col-md-6">
+            <div class="form-group">
+                <label for="CD44">CD44:</label>
+                <input type="number" class="form-control" name="CD44" required step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="TOP2A">TOP2A:</label>
+                <input type="number" class="form-control" name="TOP2A" required step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="SAMSN1">SAMSN1:</label>
+                <input type="number" class="form-control" name="SAMSN1" required step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="RBM47">RBM47:</label>
+                <input type="number" class="form-control" name="RBM47" required step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="CORO1A">CORO1A:</label>
+                <input type="number" class="form-control" name="CORO1A" required step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="ZC3HAV1">ZC3HAV1:</label>
+                <input type="number" class="form-control" name="ZC3HAV1" required step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="HLAA">HLAA:</label>
+                <input type="number" class="form-control" name="HLAA" required step="any">
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
